@@ -24,6 +24,7 @@ public class Rotate : MonoBehaviour
                 rb.transform.Rotate(0, 0, thrust * -1, Space.World);
             else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
                 rb.transform.Rotate(0, 0, thrust, Space.World);
+            //tab + E resets rotation only
             if (Input.GetKey(KeyCode.E))
                 rb.rotation = Quaternion.identity;
         }

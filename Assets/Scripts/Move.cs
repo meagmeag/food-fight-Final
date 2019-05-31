@@ -17,8 +17,10 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //makes sure it doesn't move while rotating
         if (!Input.GetKey(KeyCode.Tab))
         {
+            //speed move
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
@@ -30,6 +32,7 @@ public class Move : MonoBehaviour
                 if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
                     rb.AddForce(Vector3.right * thrust * -2);
             }
+            //normal move
             else
             {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
@@ -42,13 +45,13 @@ public class Move : MonoBehaviour
                     rb.AddForce(Vector3.right * thrust * -1);
             }
         }
+        //reset position and rotation 
         if (Input.GetKey(KeyCode.R))
         {
             rb.rotation = Quaternion.identity;
             rb.position = Vector3.zero;
         }
     }
-    //does this work
 
     }
 
