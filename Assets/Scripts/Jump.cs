@@ -7,6 +7,7 @@ public class Jump : MonoBehaviour
 
     Rigidbody rb;
     public float thrust = 10;
+    GameObject touched;
     bool grounded;
 
     // Use this for initialization
@@ -17,7 +18,8 @@ public class Jump : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        grounded = true;
+        if (collision.gameObject.name.Equals("Ground"))
+            grounded = true;
 
     }
 

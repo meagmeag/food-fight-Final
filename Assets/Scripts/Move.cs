@@ -49,7 +49,8 @@ public class Move : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             rb.rotation = Quaternion.identity;
-            rb.position = Vector3.zero;
+            Vector3 start = new Vector3(0, .5f, 0);
+            rb.position = start;
         }
     }
 

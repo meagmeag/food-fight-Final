@@ -27,8 +27,8 @@ public class ChooseRandomObject : MonoBehaviour {
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 int ranX = Random.Range(-360,360);
-                int ranY = Random.Range(-360, 360);
-                Vector3 force = new Vector3(ranX, 0, ranY);
+                int ranZ = Random.Range(-360, 360);
+                Vector3 force = new Vector3(ranX, 0, ranZ);
                 rb.AddForce(force * 5);
             }
         }

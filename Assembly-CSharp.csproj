@@ -62,9 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ChooseRandomObject.cs" />
+    <Compile Include="Assets\Scripts\Hold.cs" />
     <Compile Include="Assets\Scripts\Jump.cs" />
+    <Compile Include="Assets\Scripts\LaunchHeld.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
-    <Compile Include="Assets\Scripts\PickUpAndHold.cs" />
+    <Compile Include="Assets\Scripts\PickUpandHold.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Unity/FINAL/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
