@@ -7,8 +7,8 @@ public class PickUpandHold : MonoBehaviour {
     Rigidbody rb, rb2;
     private bool touching;
     GameObject touched;
-    public List<GameObject> inventory;
-    public Text picked;
+    public static List<GameObject> inventory = new List<GameObject>();
+    public Text inventoryTxt;
 
 	// Use this for initialization
 	void Start () {
@@ -38,11 +38,12 @@ public class PickUpandHold : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		if(Input.GetKey(KeyCode.Q) && touching)
+		if(Input.GetKey(KeyCode.Q) && touching && !Input.GetKey(KeyCode.LeftShift))
         {
+            touched.SetActive(false);
             inventory.Add(touched);
-            picked.text = "Picked up" + touched.name;
-            Destroy(touched);
+            inventoryTxt.text = "# in inventory:" + inventory.Count;
+            touching = false;
         }
 	}
 }
